@@ -6,9 +6,10 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   filec = fs.readFile('index.html');
-  buf = new Buffer(256);
-  buf.write(filec);
-  response.send(buf.toString('utf8'));
+  //buf = new Buffer(256);
+  //buf.write(filec);
+  //response.send(buf.toString('utf8'));
+  response.send(filec.toString('utf8'));
   //response.send('Hello World 2!');
 });
 
